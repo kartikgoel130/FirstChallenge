@@ -1,0 +1,140 @@
+html body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for mobile */
+.container{
+  max-width: 375px;
+  background-color: hsl(233, 47%, 7%);
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+}
+.flex-container{
+  display: flex;
+  background-color: hsl(244, 38%, 16%);
+  flex-direction: column;
+  height: 100%;
+  margin: 20px;
+  border-radius: 2%;
+}
+.image-section{
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 2% 2% 0 0;
+}
+.img-mobile{
+  max-width: 100%;
+  background-blend-mode: multiply;
+  opacity: 25%;
+  border-radius: 5% 5% 0 0;
+  object-fit: contain;
+}
+.img-desktop{
+  display: none;
+}
+.text-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-section div{
+  padding: 10px;
+}
+.hero-header{
+  font-family: 'Inter', sans-serif;
+  font-size: 35px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-weight: 600;
+}
+.hero-highlight{
+  display: inline-block;
+  color: hsl(277, 64%, 61%);
+}
+.content-text{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 17px;
+  color: hsla(0, 0%, 100%, 0.75);
+  text-align: center;
+}
+.content-stats-item div{
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+}
+.content-stats-item  div:first-child{
+  color:  hsla(0, 0%, 100%, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-stats .text{
+  text-transform: uppercase;
+}
+
+/* Styles for Desktop */
+@media (min-width: 600px){
+  .container{
+      max-width: 1600px;
+      min-height: 100vh;
+  }
+  .flex-container{
+      flex-direction: row-reverse;
+      border-radius: 2%;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .image-section{
+      border-radius: 0 2% 2% 0;
+      /* max-width: 40%; */
+  }
+  .img-mobile{
+      display: none;
+  }
+  .img-desktop{
+      display: block;
+      width: 100%;
+      border-radius: 0 2% 2% 0;
+      opacity: 25%;
+  }
+  .text-section{
+      justify-content: center;
+      align-items: center;
+      margin: 40px;
+      max-width: 394px;
+  }
+  .text-section div{
+      /* padding: 0;*/ 
+  }
+  .hero-header{
+      /* margin: 0; */
+      font-size: 35px;
+      margin-bottom: 20px;
+      text-align: left;
+      font-weight: 600;
+  }
+  .content-text{
+      text-align: left;
+      font-size: 15px;
+  }
+  .content-stats{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 100%;
+  }
+
+  .content-stats .text{
+    text-transform: uppercase;
+  }
+}
